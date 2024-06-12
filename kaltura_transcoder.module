@@ -1,0 +1,16 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Symfony\Component\Routing\Route;
+
+// https://ocean-master.lndo.site/kaltura/transcode?entry_id=0_3p9s4pfd
+
+/**
+ * Implements hook_help().
+ */
+function kaltura_transcoder_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.kaltura_transcoder':
+      return '<p>' . t('A module to transcode FLV videos to MP4 using Kaltura.') . '</p>';
+  }
+}

@@ -1,0 +1,45 @@
+kaltura_transcoder.get_flavors:
+  path: '/kaltura/get-flavors'
+  defaults:
+    _controller: '\Drupal\kaltura_transcoder\Controller\TranscoderController::getFlavors'
+    _title: 'Get Flavors'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _format: 'json'
+kaltura_transcoder.create_flavor:
+  path: '/kaltura/create-flavor'
+  defaults:
+    _controller: '\Drupal\kaltura_transcoder\Controller\TranscoderController::createFlavor'
+    _title: 'Create Flavor'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _format: 'json'
+kaltura_transcoder.download_flavor:
+  path: '/kaltura/download_flavor'
+  defaults:
+    _controller: '\Drupal\kaltura_transcoder\Controller\TranscoderController::downloadFlavor'
+    _title: 'Download Flavor'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _format: 'json'
+kaltura_transcoder.download_category:
+  path: '/kaltura/download_category/{category_id}'
+  defaults:
+    _controller: '\Drupal\kaltura_transcoder\Controller\TranscoderController::downloadCategory'
+    _title: 'Download Category'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _format: 'json'
+kaltura_transcoder.assign_category:
+  path: '/kaltura/assign_category'
+  defaults:
+    _controller: '\Drupal\kaltura_transcoder\Controller\TranscoderController::assignCategoryToEntries'
+    _title: 'Assign Category to Entries'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _format: 'json'

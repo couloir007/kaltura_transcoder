@@ -1,0 +1,10 @@
+name: 'Kaltura Transcoder'
+type: module
+description: 'A module to transcode FLV videos to MP4 using Kaltura.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - drupal:field
+  - drupal:file
+  - drupal:media
+  - drupal:node

@@ -1,0 +1,16 @@
+services:
+  kaltura_transcoder.kaltura_client:
+    class: Drupal\kaltura_transcoder\Service\KalturaClientService
+
+  kaltura_transcoder.transcode_flv:
+    class: Drupal\kaltura_transcoder\Service\TranscodeFLVService
+    arguments: ['@kaltura_transcoder.kaltura_client']
+
+  kaltura_transcoder.download_flv:
+    class: Drupal\kaltura_transcoder\Service\DownloadFLVService
+    arguments: ['@kaltura_transcoder.kaltura_client']
+
+
+  kaltura_transcoder.assign_category:
+    class: Drupal\kaltura_transcoder\Service\AssignCategoryService
+    arguments: ['@kaltura_transcoder.kaltura_client']
